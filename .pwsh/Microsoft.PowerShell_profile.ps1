@@ -1,6 +1,5 @@
+# Add the oh-my-posh theme
 oh-my-posh init pwsh | Invoke-Expression
 
+# Imports module that adds file and folder icons
 Import-Module -Name Terminal-Icons
-
-& 'C:\Users\kevan\Miniconda3\shell\condabin\conda-hook.ps1'
-conda activate 'C:\Users\kevan\Miniconda3'
