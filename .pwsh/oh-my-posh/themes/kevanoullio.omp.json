@@ -63,22 +63,22 @@
           "type": "java"
         },
         {
-          "foreground": "#7CB76D",
-          "properties": {
-            "fetch_version": true
-          },
-          "style": "plain",
-          "template": "<#FFFFFF>via</> \ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "type": "node"
-        },
-        {
           "foreground": "#CB3837",
           "properties": {
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#FFFFFF>via</> \ue71e {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "<#FFFFFF>via</> \ue71e {{ .Full }} ",
           "type": "npm"
+        },
+        {
+          "foreground": "#7CB76D",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "type": "node"
         },
         {
           "foreground": "#61DAFB",
@@ -86,7 +86,7 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "<#FFFFFF>via</> \ue7ba {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
+          "template": "\ue7ba {{ .Full }} ",
           "type": "react"
         }
       ],
