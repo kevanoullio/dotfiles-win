@@ -8,6 +8,8 @@ SCRIPT_DIR=$(dirname "$(readlink -f "$0")")
 bash $SCRIPT_DIR/setup_pwsh.sh
 bash $SCRIPT_DIR/setup_ohmyposh.sh
 bash $SCRIPT_DIR/setup_git.sh
+bash $SCRIPT_DIR/setup_c.sh
+bash $SCRIPT_DIR/setup_python.sh
 
 echo "All setups complete!"
 
