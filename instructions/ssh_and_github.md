@@ -5,13 +5,13 @@
 - Navigate to the .ssh directory:
 
 ```powershell
-cd ~/.ssh
+Set-Location -Path $HOME\.ssh
 ```
 
 - List the files in the directory:
 
 ```powershell
-ls
+Get-ChildItem
 ```
 
 - Look for files named id_rsa.pub, id_ecdsa.pub, or id_ed25519.pub. If any of these files exist, you have an SSH key.
@@ -30,12 +30,13 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 - Copy the public key to the clipboard:
 
 ```powershell
-cat ~/.ssh/id_ed25519.pub | clip
+Get-Content -Path $HOME\.ssh\id_ed25519.pub | Set-Clipboard
 ```
 
 - Go to GitHub and log in.
 - Navigate to Settings > SSH and GPG keys > New SSH key.
 - Paste the public key into the "Key" field and give it a title.
+- Select "Authentication" as the key type.
 - Click Add SSH key.
 
 ### 4. Test if the SSH Key Works
