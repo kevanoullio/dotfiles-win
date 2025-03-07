@@ -39,7 +39,20 @@ Get-Content -Path $HOME\.ssh\id_ed25519.pub | Set-Clipboard
 - Select "Authentication" as the key type.
 - Click Add SSH key.
 
-### 4. Test if the SSH Key Works
+### 4. Start the ssh-agent and Add Your SSH Key
+- Start the ssh-agent in the background:
+
+```powershell
+Start-Service ssh-agent
+```
+
+- Add your SSH private key to the ssh-agent:
+
+```powershell
+ssh-add $HOME\.ssh\id_ed25519
+```
+
+### 5. Test if the SSH Key Works
 - Test the SSH key by running the following command in PowerShell:
 
 ```powershell
