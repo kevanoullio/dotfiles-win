@@ -8,6 +8,12 @@
 Set-Location -Path $HOME\.ssh
 ```
 
+### 2. If the .ssh directory doesn't exist
+- Follow this guide: https://windowsloop.com/install-openssh-server-windows-11/?form=MG0AV3
+- Go to "Settings > System > Add an optional feature"
+- Select "View features" and install/add "OpenSSH Server"
+
+### 3. 
 - List the files in the directory:
 
 ```powershell
@@ -16,7 +22,7 @@ Get-ChildItem
 
 - Look for files named id_rsa.pub, id_ecdsa.pub, or id_ed25519.pub. If any of these files exist, you have an SSH key.
 
-### 2. Generate an Ed25519 SSH Key
+### 4. Generate an Ed25519 SSH Key
 - Generate the SSH key:
 
 ```powershell
@@ -25,7 +31,7 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 
 - Follow the prompts to save the key in the default location and set a passphrase (optional).
 
-### 3. Upload the Public Key to GitHub
+### 5. Upload the Public Key to GitHub
 
 - Copy the public key to the clipboard:
 
@@ -39,7 +45,7 @@ Get-Content -Path $HOME\.ssh\id_ed25519.pub | Set-Clipboard
 - Select "Authentication" as the key type.
 - Click Add SSH key.
 
-### 4. Start the ssh-agent and Add Your SSH Key
+### 6. Start the ssh-agent and Add Your SSH Key
 - Start the ssh-agent in the background:
 
 ```powershell
@@ -52,7 +58,7 @@ Start-Service ssh-agent
 ssh-add $HOME\.ssh\id_ed25519
 ```
 
-### 5. Test if the SSH Key Works
+### 7. Test if the SSH Key Works
 - Test the SSH key by running the following command in PowerShell:
 
 ```powershell
