@@ -65,6 +65,9 @@ Start-Service ssh-agent
 ssh-add $HOME\.ssh\id_ed25519
 ```
 
+- **Persist the key across reboots**:
+  - On Windows, the `ssh-agent` does not automatically persist keys across reboots. You will need to re-add the key manually after restarting your computer by running the `ssh-add` command again.
+
 - Verify the key has been added:
 
 ```powershell
