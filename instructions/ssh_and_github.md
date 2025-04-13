@@ -46,6 +46,12 @@ Get-Content -Path $HOME\.ssh\id_ed25519.pub | Set-Clipboard
 - Click Add SSH key.
 
 ### 6. Start the ssh-agent and Add Your SSH Key
+- Enable the ssh-agent service to start automatically:
+
+```powershell
+Set-Service -Name ssh-agent -StartupType Automatic
+```
+
 - Start the ssh-agent in the background:
 
 ```powershell
@@ -56,6 +62,12 @@ Start-Service ssh-agent
 
 ```powershell
 ssh-add $HOME\.ssh\id_ed25519
+```
+
+- Verify the key has been added:
+
+```powershell
+ssh-add -l
 ```
 
 ### 7. Test if the SSH Key Works
