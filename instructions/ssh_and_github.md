@@ -46,6 +46,7 @@ Get-Content -Path $HOME\.ssh\id_ed25519.pub | Set-Clipboard
 - Click Add SSH key.
 
 ### 6. Start the ssh-agent and Add Your SSH Key
+- **IMPORTANT: Run PowerShell as Administrator**
 - Enable the ssh-agent service to start automatically:
 
 ```powershell
